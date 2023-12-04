@@ -270,5 +270,4 @@ $('#save-data').on('click', function() {
     
 });
 
-
-    updateTable(); // Initial table load
+updateTable(); // Initial table load
