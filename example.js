@@ -267,52 +267,8 @@ $('#searchInput').on('keyup', function(event) {
 
 
 $('#save-data').on('click', function() {
-    if (confirm("Apakah anda yakin ingin meminta approval untuk mengubah data ini?")) {
-        var changedDataToSend = {};
-        var originalDataToSend = {};
-
-        for (var key in changes) {
-            var change = changes[key];
-            var original = originalData.find(item => item.id === key);
-
-            changedDataToSend[key] = JSON.stringify(change);
-            originalDataToSend[key] = JSON.stringify(original);
-        }
-
-        var dataToSend = {
-            changed: changedDataToSend,
-            original: originalDataToSend,
-            act: 'send_appv',
-        };
-
-        $.ajax({
-            url: "form/process.php",
-            type: "POST",
-            data: dataToSend,
-            beforeSend: function() {
-                $(this).attr("disabled", "disabled");
-                $("#appv-loader").show();
-            },
-            success: function(response) {
-                console.log(response)
-                if (response == 1) {
-                    changes = {};
-                    alert('Data Has Been Successfully Saved');
-                    window.location.reload(window.location.href);
-
-
-                } else {
-                    console.log("Error saving data.");
-                }
-                $(this).attr("disabled", "");
-                $("#appv-loader").hide();
-            },
-            error: function() {
-                alert("Error saving data.");
-            }
-        });
-    }
-    });
+    
+});
 
 
     updateTable(); // Initial table load
