@@ -30,7 +30,7 @@ Ensure you have Handsontable and jQuery included in your project as well:
 ```
 
 ## Example Usage
-``html
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
