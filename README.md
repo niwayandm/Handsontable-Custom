@@ -21,6 +21,7 @@ git clone https://github.com/niwayandm/Handsontable-Custom.git
 ```html
 <script src="path/to/Handsontable-Custom.js"></script>
 ```
+
 Ensure you have Handsontable and jQuery included in your project as well:
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css">
